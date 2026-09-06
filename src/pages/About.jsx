@@ -16,9 +16,9 @@ export default function About() {
   return (
     <>
       <PageHeader
-        eyebrow="About Vitalis"
+        eyebrow={`About ${site.name}`}
         title="A hundred years of the same argument: that care should be personal"
-        lead={`Founded in ${site.established} as an eleven-bed clinic on Rue de la Charité, Vitalis is now a thirteen-institute academic medical centre — still on the same street, still built around the idea that a patient should be known by name.`}
+        lead={`Founded in ${site.established} as an eleven-bed dispensary on Palace Cross Road, ${site.name} is now a thirteen-institute academic medical centre — still on the same street, still built around the idea that a patient should be known by name.`}
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
         variant="colonnade"
         seed={11}
@@ -33,18 +33,21 @@ export default function About() {
               <Reveal delay={0.08} className="mt-8 space-y-6 text-[1.0625rem] leading-relaxed text-pine-900/72">
                 <p>
                   Almost everything that frustrates people about hospitals is organisational rather than clinical.
-                  Appointments that do not talk to each other. Results that arrive by post a fortnight after the
-                  anxiety began. A different face at every visit, and a history retold from scratch each time.
+                  Departments that do not talk to each other. Reports collected in person a fortnight after the
+                  anxiety began. A different face at every visit, and a history retold from scratch each time. A bill
+                  bearing no relation to what anybody said it would be.
                 </p>
                 <p>
-                  Vitalis was rebuilt around those failures rather than around departments. One named clinician
+                  {site.name} was rebuilt around those failures rather than around departments. One named clinician
                   owns each case. Diagnostics happen in a single morning. Results reach you and your consultant at
                   the same moment. None of this is technically difficult — it is simply a choice about how a
                   hospital is arranged.
                 </p>
                 <p>
                   We publish our clinical outcomes every year, including the ones we are not proud of, because a
-                  hospital that only reports its successes is asking to be trusted rather than earning it.
+                  hospital that only reports its successes is asking to be trusted rather than earning it. The same
+                  applies to money: every planned procedure carries a written estimate, and we telephone you before
+                  anything departs from it.
                 </p>
               </Reveal>
 
@@ -56,7 +59,7 @@ export default function About() {
                     attention.”
                   </blockquote>
                   <figcaption className="mt-5 text-[0.875rem] text-pine-900/55">
-                    Dr Marguerite Vitalis, founder — from her opening address, 1924
+                    Dr Kamala Achar, founder — from her opening address, 1926
                   </figcaption>
                 </figure>
               </Reveal>
@@ -65,12 +68,12 @@ export default function About() {
             <Reveal delay={0.1}>
               <div className="relative aspect-4/5 w-full lg:sticky lg:top-32">
                 <div className="arch absolute inset-0 overflow-hidden shadow-lift">
-                  <ArtPanel variant="atrium" tone="pine" seed={21} arch={false} label="The Vitalis building" />
+                  <ArtPanel variant="atrium" tone="pine" seed={21} arch={false} label={`The ${site.name} building`} />
                 </div>
                 <div className="arch pointer-events-none absolute -inset-3 border border-brass-500/30" aria-hidden="true" />
                 <div className="absolute -bottom-8 left-4 border border-stone-200 bg-ivory px-6 py-5 shadow-card">
-                  <p className="eyebrow text-brass-600">Rue de la Charité</p>
-                  <p className="mt-2.5 font-display text-[1.9rem] leading-none text-pine-900">Since 1924</p>
+                  <p className="eyebrow text-brass-600">Palace Cross Road</p>
+                  <p className="mt-2.5 font-display text-[1.9rem] leading-none text-pine-900">Since {site.established}</p>
                 </div>
               </div>
             </Reveal>
@@ -199,7 +202,7 @@ export default function About() {
       <CTABand
         eyebrow="Visit us"
         title="Come and see the place before you need it"
-        lead="We run guided tours of the campus for prospective patients and referring practices every Thursday afternoon. No obligation, and no sales pitch."
+        lead="We run guided tours of the campus for prospective patients and referring doctors every Thursday afternoon. No obligation, and no sales pitch."
         primary={{ label: 'Arrange a visit', to: '/contact' }}
       />
     </>

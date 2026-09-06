@@ -21,6 +21,13 @@ export default function CentreDetail() {
   const team = doctorsByDepartment(dept.slug)
   const others = departments.filter((d) => d.slug !== dept.slug).slice(0, 4)
 
+  // A one- or two-person team in a four-column grid reads as a broken row, so
+  // the track count follows the size of the team.
+  const teamGrid =
+    ['', 'lg:grid-cols-1 lg:max-w-xs', 'lg:grid-cols-2 lg:max-w-2xl', 'lg:grid-cols-3'][
+      Math.min(team.length, 4)
+    ] ?? 'lg:grid-cols-4'
+
   const facts = [
     { label: 'Established', value: dept.established },
     { label: 'Consultants', value: dept.consultants },
@@ -222,7 +229,7 @@ export default function CentreDetail() {
               </Reveal>
             </div>
 
-            <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <ul className={`mt-14 grid gap-6 sm:grid-cols-2 ${teamGrid}`}>
               {team.map((doc, i) => (
                 <Reveal as="li" key={doc.slug} delay={i * 0.07}>
                   <DoctorCard doctor={doc} />

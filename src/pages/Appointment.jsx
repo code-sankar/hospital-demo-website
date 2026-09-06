@@ -28,7 +28,7 @@ const reasons = [
   { id: 'package', label: 'Health screening', detail: 'A preventive package rather than a symptom.' },
 ]
 
-const times = ['08:00', '09:15', '10:30', '11:45', '14:00', '15:15', '16:30', '17:45']
+const times = ['9:00 am', '10:15 am', '11:30 am', '12:45 pm', '3:00 pm', '4:15 pm', '5:30 pm', '6:45 pm']
 
 /** The next ten weekdays, used to populate the date picker. */
 function nextWeekdays(count = 10) {
@@ -42,10 +42,10 @@ function nextWeekdays(count = 10) {
   return out
 }
 
-const fmtDay = (d) => d.toLocaleDateString('en-GB', { weekday: 'short' })
-const fmtDate = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
+const fmtDay = (d) => d.toLocaleDateString('en-IN', { weekday: 'short' })
+const fmtDate = (d) => d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
 const fmtFull = (d) =>
-  d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
+  d.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
 
 export default function Appointment() {
   const [step, setStep] = useState(0)
@@ -114,8 +114,11 @@ export default function Appointment() {
       setErrors({ consent: 'Please confirm before submitting.' })
       return
     }
+    // Prefix derives from the brand, so a rebrand in src/data/site.js carries through.
     setReference(
-      `VIT-${String(new Date().getFullYear()).slice(2)}${String(Math.floor(Math.random() * 9000) + 1000)}`,
+      `${site.name.slice(0, 3).toUpperCase()}-${String(new Date().getFullYear()).slice(2)}${String(
+        Math.floor(Math.random() * 9000) + 1000,
+      )}`,
     )
     setSubmitted(true)
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -490,7 +493,7 @@ export default function Appointment() {
                         )}
                       </span>
                       <span className="text-[0.875rem] leading-relaxed text-pine-900/70">
-                        I agree that Vitalis may contact me about this request, and I understand that submitting
+                        I agree that {site.name} may contact me about this request, and I understand that submitting
                         it does not confirm an appointment until the team replies.
                       </span>
                     </label>
@@ -558,7 +561,7 @@ export default function Appointment() {
               <ul className="mt-6 space-y-5">
                 {[
                   { icon: Clock, title: 'Confirmed in one hour', detail: 'Every request is answered by a person during clinic hours.' },
-                  { icon: ShieldCheck, title: 'Direct billing', detail: 'We settle directly with all major Swiss and international insurers.' },
+                  { icon: ShieldCheck, title: 'Direct billing', detail: 'Cashless treatment with all major Indian insurers, TPAs, CGHS, ESIC and PM-JAY.' },
                   { icon: CalendarCheck, title: 'Free to reschedule', detail: 'Change or cancel up to 24 hours before with no charge.' },
                 ].map((item) => {
                   const Icon = item.icon

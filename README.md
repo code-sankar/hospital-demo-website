@@ -1,13 +1,17 @@
-# Vitalis Medical Centre — hospital & healthcare demo website
+# Ashvini Institute of Medical Sciences — hospital & healthcare demo website
 
-A complete, production-shaped demo website for hospitals, clinics and healthcare
-centres — built to be shown in a pitch and then rebranded for the client who
-says yes.
+A complete, production-shaped demo website for Indian hospitals, clinics and
+healthcare centres — built to be shown in a pitch and then rebranded for the
+client who says yes.
 
-The design leans European: a refined serif display face, a deep clinical green
-and warm parchment palette, brass hairlines, generous whitespace and a recurring
-architectural arch motif. It is deliberately not the usual blue-and-white
-hospital template.
+**European design, Indian content.** The visual language is deliberately
+European-editorial: a refined serif display face, a deep clinical green and warm
+parchment palette, brass hairlines, generous whitespace and a recurring
+architectural arch motif — not the usual blue-and-white hospital template. The
+content underneath it is entirely Indian: a Bengaluru campus, NABH and JCI
+accreditation, DM / MCh / DNB qualifications, cashless TPA billing, ₹ pricing,
+108 for the ambulance, and clinical copy written around the conditions Indian
+hospitals actually treat.
 
 **Stack:** Vite 8 · React 19 · Tailwind CSS 4 · React Router 7 · Motion · Lucide
 
@@ -37,7 +41,7 @@ Node 20+ recommended (developed on Node 22).
 | `/centres/:slug` | Full speciality page — overview, treatments, pathway, technology, team, FAQs |
 | `/doctors` | Consultant directory with search, speciality/language filters and sorting |
 | `/doctors/:slug` | Consultant profile — biography, training, memberships, clinic times |
-| `/patients` | Planning a visit, visiting hours, admissions & billing, health packages, international patients, FAQs |
+| `/patients` | Planning a visit, visiting hours, admissions & cashless billing, health check packages, international patients, FAQs |
 | `/appointment` | Four-step booking wizard with validation and a confirmation screen |
 | `/insights` | Health articles with category filtering |
 | `/insights/:slug` | Long-form article with author card and related reading |
@@ -57,10 +61,10 @@ Almost everything a prospect will ask you to change lives in `src/data/`.
 
 | File | Contains |
 | --- | --- |
-| `site.js` | Name, tagline, phone numbers, address, opening hours, navigation, headline statistics, accreditations |
+| `site.js` | Name, tagline, phone numbers, address, OPD hours, navigation, headline statistics, accreditations |
 | `departments.js` | The centres of excellence — each object generates a card, a route, a detail page and its FAQs |
 | `doctors.js` | The consultant directory and every profile page |
-| `patients.js` | Visit planning, visiting hours, insurers, health packages, international services, FAQs |
+| `patients.js` | Visit planning, visiting hours, insurers and TPAs, health check packages, international services, FAQs |
 | `articles.js` | Health Insights articles (body is a simple block array: `p`, `h`, `quote`, `list`) |
 | `testimonials.js` | Patient quotes |
 | `about.js` | Timeline, values, leadership, published outcomes, vacancies |
@@ -68,6 +72,16 @@ Almost everything a prospect will ask you to change lives in `src/data/`.
 Adding a department to `departments.js` is enough to create its card, its route
 at `/centres/<slug>`, its detail page and its footer link — nothing else needs
 editing.
+
+### Localisation already in place
+
+Numbers use the Indian grouping system (`en-IN`), so 386000 renders as
+`3,86,000` rather than `386,000`. Dates follow the same locale. Clinic times are
+written in the 12-hour form Indian patients expect, prices in ₹, and the
+language switcher and consultant profiles carry Devanagari, Kannada, Tamil,
+Telugu, Malayalam, Bengali and Urdu strings — worth checking if you change the
+display font, since Cormorant Garamond has no Indic coverage and those strings
+fall through to the system stack by design.
 
 ### Colours and type
 
@@ -143,10 +157,15 @@ project, extracting them is the first refactor worth doing.
 
 - **Nothing is submitted anywhere.** The booking wizard and the contact form
   validate, show a realistic confirmation and then stop. No network requests, no
-  data leaves the browser. Both screens say so in plain language.
-- **The content is fictional.** Vitalis is an invented institution; the
+  data leaves the browser. Both screens say so in plain language. Before a real
+  deployment, note that patient data collected through these forms falls under
+  the DPDP Act 2023 — consent language and a privacy notice need a lawyer's
+  eyes, not a template.
+- **The content is fictional.** Ashvini is an invented institution; the
   consultants, outcomes, accreditations and contact details are illustrative,
-  and the footer states this. Replace them before any public deployment.
+  and the footer states this. Replace them before any public deployment — and
+  note that real NABH / JCI / NABL claims are regulated, so only a client who
+  actually holds them may display them.
 - **Deployment** is a static build — `npm run build` produces `dist/`, which
   drops straight onto Netlify, Vercel, Cloudflare Pages or any static host.
   Configure the host to rewrite unknown paths to `index.html` so the client-side

@@ -26,7 +26,7 @@ const columns = [
   {
     title: 'The centre',
     links: [
-      { label: 'About Vitalis', to: '/about' },
+      { label: `About ${site.name}`, to: '/about' },
       { label: 'Our leadership', to: '/about#leadership' },
       { label: 'Quality & outcomes', to: '/about#outcomes' },
       { label: 'Health insights', to: '/insights' },
@@ -187,7 +187,7 @@ export default function Footer() {
             © {year} {site.legalName}. All rights reserved.
           </p>
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
-            {['Privacy notice', 'Cookie policy', 'Patients’ charter', 'Accessibility', 'Modern slavery statement'].map(
+            {['Privacy notice', 'Cookie policy', 'Patients’ rights & responsibilities', 'Accessibility', 'Grievance redressal'].map(
               (l) => (
                 <li key={l}>
                   <a href="#legal" className="link-underline hover:text-pine-100/80">
@@ -200,9 +200,9 @@ export default function Footer() {
         </div>
 
         <p className="border-t border-ivory/10 py-6 text-[0.6875rem] leading-relaxed text-pine-100/30">
-          This website is a design demonstration. Vitalis Medical Centre is a fictional institution, and all
-          clinicians, outcomes and contact details shown here are illustrative. Nothing on this site is medical
-          advice — if you are unwell, contact your own doctor or local emergency services.
+          This website is a design demonstration. {site.fullName} is a fictional institution, and every
+          clinician, outcome, accreditation and contact detail shown here is illustrative. Nothing on this site is
+          medical advice — if you are unwell, contact your own doctor, or call 108 for an ambulance.
         </p>
       </Container>
     </footer>

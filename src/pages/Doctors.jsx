@@ -49,7 +49,7 @@ export default function Doctors() {
       <PageHeader
         eyebrow="Find a doctor"
         title="Choose your consultant, rather than be allocated one"
-        lead="Search by name, speciality, condition or the language you would rather be treated in. Every profile lists training, sub-speciality interests and clinic times."
+        lead="Search by name, speciality, condition or the language you would rather be treated in. Every profile lists qualifications, sub-speciality interests and clinic times."
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Find a Doctor' }]}
         variant="lattice"
         seed={8}
@@ -202,8 +202,8 @@ export default function Doctors() {
           )}
 
           <p className="mt-14 border-t border-stone-200 pt-8 text-[0.8125rem] leading-relaxed text-pine-900/50">
-            This directory shows a representative selection of our {doctors.length * 15} clinical staff. Registrars,
-            fellows and allied health professionals are listed inside each centre of excellence.
+            This directory shows a representative selection of our 312 consultants. Registrars, DNB trainees and
+            allied health professionals are listed inside each centre of excellence.
           </p>
         </Container>
       </section>

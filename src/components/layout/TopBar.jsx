@@ -44,7 +44,7 @@ export default function TopBar() {
             <span className="flex items-center gap-1.5">
               <Globe className="size-3.5" />
               <span className="tracking-wide">EN</span>
-              <span className="text-pine-100/35">/ FR / DE</span>
+              <span className="text-[0.8125rem] leading-none text-pine-100/40">/ हिं / ಕನ್ನಡ</span>
             </span>
             <a
               href="#patient-portal"

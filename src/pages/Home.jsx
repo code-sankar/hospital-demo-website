@@ -17,6 +17,7 @@ import ArticleCard from '../components/sections/ArticleCard'
 import { departments } from '../data/departments'
 import { doctors } from '../data/doctors'
 import { articles } from '../data/articles'
+import { site } from '../data/site'
 
 const differentiators = [
   {
@@ -27,9 +28,9 @@ const differentiators = [
   },
   {
     icon: Timer,
-    title: 'Forty-five minute first visits',
+    title: 'Thirty-minute first visits',
     detail:
-      'Nobody should decide about their own body in the last ten minutes of an overrunning clinic. We schedule the time properly.',
+      'Nobody should decide about their own body in the four minutes left at the end of an overbooked clinic. We schedule the time properly.',
   },
   {
     icon: Microscope,
@@ -39,16 +40,16 @@ const differentiators = [
   },
   {
     icon: Sparkles,
-    title: 'Outcomes published annually',
+    title: 'No surprises on the bill',
     detail:
-      'Infection rates, waiting times and complication data — released every year whether or not the figures flatter us.',
+      'A written package estimate before every planned procedure, and a call before anything varies from it. Financial clarity is part of care.',
   },
 ]
 
 const pathway = [
-  { n: '01', title: 'Get in touch', detail: 'Book online, by telephone or through your family doctor. Confirmed within one working hour.' },
+  { n: '01', title: 'Get in touch', detail: 'Book online, on WhatsApp or by telephone. Confirmed within one working hour.' },
   { n: '02', title: 'One diagnostic visit', detail: 'Imaging, bloods and physiology completed together — not spread across three appointments.' },
-  { n: '03', title: 'A plan you understand', detail: 'Your consultant explains the options, the evidence and the trade-offs, then writes it down for you.' },
+  { n: '03', title: 'A plan you understand', detail: 'Your consultant explains the options and the costs in your own language, then writes it down for you.' },
   { n: '04', title: 'Treatment & recovery', detail: 'A named nurse, a scheduled review and a rehabilitation programme that starts on day one.' },
 ]
 
@@ -92,20 +93,20 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* ---------------- Why Vitalis ---------------- */}
+      {/* ---------------- Why this hospital ---------------- */}
       <section className="border-y border-stone-200 bg-parchment py-20 lg:py-28">
         <Container size="wide">
           <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
             <Reveal className="relative">
               <div className="relative mx-auto aspect-4/5 w-full max-w-md lg:sticky lg:top-32">
                 <div className="arch absolute inset-0 overflow-hidden shadow-lift">
-                  <ArtPanel variant="courtyard" tone="pine" seed={5} arch={false} label="The Vitalis courtyard" />
+                  <ArtPanel variant="courtyard" tone="pine" seed={5} arch={false} label={`The ${site.name} courtyard`} />
                 </div>
                 <div className="arch pointer-events-none absolute -inset-3 border border-brass-500/30" aria-hidden="true" />
                 <div className="absolute right-4 -bottom-8 border border-stone-200 bg-ivory px-6 py-5 shadow-card">
-                  <p className="font-display text-[2.4rem] leading-none text-pine-900">1924</p>
+                  <p className="font-display text-[2.4rem] leading-none text-pine-900">{site.established}</p>
                   <p className="mt-1.5 text-[0.75rem] tracking-wide text-pine-900/55">
-                    Caring for this city since
+                    Caring for Bengaluru since
                   </p>
                 </div>
               </div>
@@ -113,7 +114,7 @@ export default function Home() {
 
             <div>
               <SectionHeading
-                eyebrow="Why Vitalis"
+                eyebrow={`Why ${site.name}`}
                 title="A hospital organised around the patient, not the rota"
                 lead="Most of what frustrates people about healthcare is logistical rather than clinical. We rebuilt the logistics."
               />
@@ -194,7 +195,7 @@ export default function Home() {
                 to="/doctors"
                 className="group inline-flex items-center gap-3 border-b border-pine-700/30 pb-2 text-[0.875rem] font-medium tracking-wide text-pine-800 transition-colors hover:border-pine-700"
               >
-                Browse all 268 consultants
+                Browse all 312 consultants
                 <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </Reveal>
@@ -229,9 +230,9 @@ export default function Home() {
                 {[
                   { name: 'Intra-operative MRI', detail: 'Confirms a tumour is fully removed before the patient leaves theatre.' },
                   { name: 'Surgical robotics', detail: 'Implants positioned within one degree of plan; smaller incisions, faster recovery.' },
-                  { name: 'Hybrid cardiac theatre', detail: 'Catheter and open surgery in one room, without moving the patient.' },
+                  { name: 'Hybrid cath lab', detail: 'Catheter and open surgery in one room, without moving the patient.' },
                   { name: 'Digital PET-CT', detail: 'Lower tracer dose with higher lesion detectability for staging.' },
-                  { name: 'Open-bore 3T MRI', detail: 'A wider aperture, so claustrophobia stops being a barrier to diagnosis.' },
+                  { name: 'Wide-bore 3T MRI', detail: 'A larger aperture, so claustrophobia stops being a barrier to diagnosis.' },
                   { name: 'In-house genomic sequencing', detail: 'A 523-gene panel reported in ten days, guiding precision therapy.' },
                 ].map((tech) => (
                   <li key={tech.name} className="group flex items-start gap-6 py-6">

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, CircleCheck, ArrowRight, Car, TramFront, Accessibility } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, CircleCheck, ArrowRight, Car, TrainFront, Accessibility } from 'lucide-react'
 import Container from '../components/ui/Container'
 import Reveal from '../components/ui/Reveal'
 import SectionHeading from '../components/ui/SectionHeading'
@@ -15,28 +15,28 @@ const desks = [
     detail: 'Booking, rescheduling and clinic enquiries.',
     phone: site.phone,
     email: site.appointmentsEmail,
-    hours: 'Mon – Fri 07:30 – 20:00 · Sat 08:00 – 14:00',
+    hours: 'Mon – Sat 8:00 am – 8:00 pm · Sun 9:00 am – 1:00 pm',
   },
   {
     title: 'International patients',
-    detail: 'Estimates, visas, interpreters and transfers.',
+    detail: 'Estimates, medical visa letters, interpreters and transfers.',
     phone: site.phone,
     email: site.internationalEmail,
-    hours: 'Mon – Fri 08:00 – 18:00 CET',
+    hours: 'Mon – Sat 9:00 am – 6:00 pm IST',
   },
   {
     title: 'General enquiries',
     detail: 'Everything else, including feedback and media.',
     phone: site.phone,
     email: site.email,
-    hours: 'Mon – Fri 08:00 – 18:00',
+    hours: 'Mon – Sat 9:00 am – 6:00 pm',
   },
 ]
 
 const gettingHere = [
-  { icon: TramFront, title: 'By tram', detail: 'Lines 12 and 18 stop directly outside the main portico on Rue de la Charité.' },
-  { icon: Car, title: 'By car', detail: '420 underground spaces. The first ninety minutes are free for patients and one companion.' },
-  { icon: Accessibility, title: 'Step-free access', detail: 'Level entry at both entrances, with wheelchairs and assistance available on request.' },
+  { icon: TrainFront, title: 'By metro', detail: 'Cubbon Park station on the Purple Line is a seven-minute drive; feeder autos wait at the hospital gate.' },
+  { icon: Car, title: 'By car or auto', detail: 'Basement parking for 340 cars and 200 two-wheelers, free for the first two hours. Drop-off bay under the portico.' },
+  { icon: Accessibility, title: 'Step-free access', detail: 'Level entry at both entrances, with wheelchairs and porters available on request.' },
 ]
 
 export default function Contact() {
@@ -149,7 +149,7 @@ export default function Contact() {
                     <Select id="c-topic" value={form.topic} onChange={(e) => set('topic', e.target.value)}>
                       <option value="appointment">An appointment</option>
                       <option value="results">Results or records</option>
-                      <option value="billing">Billing or insurance</option>
+                      <option value="billing">Billing, insurance or TPA</option>
                       <option value="international">International patient services</option>
                       <option value="referral">Referring a patient</option>
                       <option value="feedback">Feedback or a complaint</option>
@@ -157,7 +157,7 @@ export default function Contact() {
                     </Select>
                   </FieldGroup>
                   <div className="sm:col-span-2">
-                    <FieldGroup label="Message" htmlFor="c-message" required hint="Please do not include clinical details you would not want in an email.">
+                    <FieldGroup label="Message" htmlFor="c-message" required hint="Please do not include clinical details you would not want sent by email.">
                       <Textarea id="c-message" rows={5} value={form.message} onChange={(e) => set('message', e.target.value)} />
                     </FieldGroup>
                   </div>
@@ -191,7 +191,7 @@ export default function Contact() {
                     </span>
                   </div>
                   <span className="absolute bottom-4 left-4 bg-ivory/92 px-3 py-1.5 text-[0.6875rem] font-semibold tracking-[0.14em] text-pine-800 uppercase backdrop-blur-sm">
-                    Vitalis campus
+                    {site.name} campus
                   </span>
                 </div>
 

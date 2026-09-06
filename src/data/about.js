@@ -1,45 +1,45 @@
 export const milestones = [
   {
-    year: '1924',
-    title: 'The Charité clinic opens',
+    year: '1926',
+    title: 'A dispensary on Palace Cross Road',
     detail:
-      'Founded by Dr Marguerite Vitalis in a converted townhouse on Rue de la Charité with eleven beds and a single operating room, serving the workers of the Saint-Marc quarter.',
+      'Dr Kamala Achar opens an eleven-bed dispensary in a rented arcaded bungalow, serving the mill workers and their families of what was then the northern edge of the city.',
   },
   {
     year: '1949',
     title: 'A wing for children',
     detail:
-      'The post-war paediatric wing opens with its own entrance and garden — the first hospital in the canton to allow parents to stay overnight with their children.',
+      'The post-independence paediatric wing opens with its own entrance and garden — the first hospital in the state to allow mothers to stay overnight with their children.',
   },
   {
     year: '1968',
     title: 'Institute of Cardiac Sciences',
     detail:
-      'The cardiac catheterisation laboratory is commissioned, and the first coronary care unit in the region admits its first patient in November.',
+      'The cardiac catheterisation laboratory is commissioned, and the region’s first dedicated coronary care unit admits its first patient in November.',
   },
   {
     year: '1991',
-    title: 'Comprehensive cancer centre',
+    title: 'A comprehensive cancer centre',
     detail:
-      'Medical, surgical and radiation oncology are brought together under a single roof, with the first multidisciplinary tumour board convened the same year.',
+      'Medical, surgical and radiation oncology are brought under one roof, and the first multidisciplinary tumour board is convened the same year.',
   },
   {
     year: '2008',
     title: 'The academic faculty',
     detail:
-      'A teaching partnership establishes 42 training posts and a clinical research unit that has since enrolled patients in more than 300 studies.',
+      'DNB teaching accreditation establishes 64 postgraduate training posts and a clinical research unit that has since enrolled patients in more than 300 studies.',
   },
   {
     year: '2019',
     title: 'Robotic surgery programme',
     detail:
-      'Robot-assisted arthroplasty and urological surgery begin, and the enhanced-recovery pathway reduces average length of stay by more than a third.',
+      'Robot-assisted arthroplasty and urological surgery begin, and the enhanced-recovery pathway cuts the average length of stay by more than a third.',
   },
   {
     year: '2026',
-    title: 'The Pavilion opens',
+    title: 'The Centenary Pavilion',
     detail:
-      'A new diagnostics and day-treatment pavilion adds open-bore MRI, a digital PET-CT and 22 day-therapy places, all arranged around a planted courtyard.',
+      'A new diagnostics and day-care pavilion adds wide-bore MRI, digital PET-CT and 28 day-therapy places — its arcades echoing the 1926 bungalow that still stands at the centre of the campus.',
   },
 ]
 
@@ -57,60 +57,60 @@ export const values = [
   {
     title: 'Time given generously',
     detail:
-      'First appointments last forty-five minutes. Nobody makes a decision about their body in the ten minutes left at the end of a rushed clinic.',
+      'First appointments last thirty minutes. Nobody should decide about their own body in the four minutes left at the end of an overbooked clinic.',
   },
   {
-    title: 'Dignity is clinical',
+    title: 'No surprises on the bill',
     detail:
-      'Privacy, language, faith and modesty are treated as part of treatment rather than as courtesies extended when time allows.',
+      'A written package estimate before every planned procedure, and a call before anything varies from it. Financial clarity is part of clinical care.',
   },
 ]
 
 export const leadership = [
   {
-    name: 'Prof. Isabelle Fournier',
+    name: 'Dr Shalini Achar',
     role: 'Chief Executive & Medical Director',
-    detail: 'Consultant respiratory physician; led the 2019 clinical-services restructuring.',
+    detail: 'Consultant respiratory physician; great-granddaughter of the founder.',
     seed: 31,
-    initials: 'IF',
+    initials: 'SA',
   },
   {
-    name: 'Prof. Anders Lindqvist',
+    name: 'Prof. Rajat Khanna',
     role: 'Director of Surgery',
     detail: 'Professor of Neurosurgery; chairs the operative governance committee.',
     seed: 7,
-    initials: 'AL',
+    initials: 'RK',
   },
   {
     name: 'Dr Priya Raghunathan',
     role: 'Director of Research',
-    detail: 'Medical oncologist; principal investigator on seven open trials.',
+    detail: 'Medical oncologist; principal investigator on seven ongoing trials.',
     seed: 11,
     initials: 'PR',
   },
   {
-    name: 'Ms Hannah Weber',
+    name: 'Ms Grace Fernandes',
     role: 'Chief Nursing Officer',
     detail: 'Thirty years in critical care; architect of the named-nurse standard.',
     seed: 33,
-    initials: 'HW',
+    initials: 'GF',
   },
 ]
 
 export const outcomes = [
-  { label: 'Patients who would recommend us', value: '96.4%', note: 'Independent survey, 4,812 responses' },
-  { label: 'Median door-to-needle, stroke', value: '26 min', note: 'European target: under 60 minutes' },
-  { label: 'Hospital-acquired infection rate', value: '0.8%', note: 'National benchmark: 2.4%' },
-  { label: 'Elective procedures starting on time', value: '94%', note: 'Measured against booked slot' },
-  { label: 'Complaints resolved within 20 days', value: '98%', note: 'Patient Liaison Office' },
-  { label: 'Staff retention, clinical roles', value: '92%', note: 'Rolling twelve months' },
+  { label: 'Patients who would recommend us', value: '96.4%', note: 'Independent survey, 7,340 responses' },
+  { label: 'Median door-to-needle, stroke', value: '24 min', note: 'National benchmark: under 60 minutes' },
+  { label: 'Hospital-acquired infection rate', value: '0.9%', note: 'NABH benchmark: under 2.5%' },
+  { label: 'Caesarean section rate', value: '31%', note: 'Audited by Robson classification' },
+  { label: 'Cashless claims cleared in 4 hours', value: '89%', note: 'Planned admissions, working days' },
+  { label: 'Staff retention, clinical roles', value: '91%', note: 'Rolling twelve months' },
 ]
 
 export const careers = [
-  { role: 'Consultant Cardiologist — Structural Heart', type: 'Full time', dept: 'Cardiac Sciences', location: 'Geneva' },
-  { role: 'Senior Staff Nurse — Intensive Care', type: 'Full time', dept: 'Critical Care', location: 'Geneva' },
-  { role: 'Clinical Research Fellow — Oncology', type: 'Fixed term, 2 years', dept: 'Oncology', location: 'Geneva' },
-  { role: 'Radiographer — MRI', type: 'Full time', dept: 'Diagnostics & Imaging', location: 'Geneva' },
-  { role: 'Midwife — Continuity Team', type: 'Full or part time', dept: 'Women & Newborn', location: 'Geneva' },
-  { role: 'Physiotherapist — Neuro-rehabilitation', type: 'Part time', dept: 'Rehabilitation', location: 'Geneva' },
+  { role: 'Consultant Cardiologist — Structural Heart', type: 'Full time', dept: 'Cardiac Sciences', location: 'Bengaluru' },
+  { role: 'Nursing Officer — Intensive Care', type: 'Full time', dept: 'Critical Care', location: 'Bengaluru' },
+  { role: 'DNB Resident — Medical Oncology', type: 'Three-year training post', dept: 'Oncology', location: 'Bengaluru' },
+  { role: 'MRI Technologist', type: 'Full time', dept: 'Diagnostics & Imaging', location: 'Bengaluru' },
+  { role: 'Nursing Officer — Labour Ward', type: 'Full or part time', dept: 'Women & Newborn', location: 'Bengaluru' },
+  { role: 'Physiotherapist — Neuro-rehabilitation', type: 'Part time', dept: 'Rehabilitation', location: 'Bengaluru' },
 ]

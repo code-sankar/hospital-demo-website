@@ -126,7 +126,7 @@ export default function Patients() {
       <section id="admissions" className="scroll-mt-36 bg-ivory py-20 lg:py-24">
         <Container size="wide">
           <SectionHeading
-            eyebrow="Admissions & billing"
+            eyebrow="Admissions, insurance & billing"
             title="No invoice should ever be a surprise"
             lead="For any planned procedure we issue a fixed-price estimate covering surgeon, anaesthetist, theatre, implant and expected length of stay — valid for ninety days."
           />
@@ -137,19 +137,19 @@ export default function Patients() {
                 icon: FileText,
                 title: 'Written estimates',
                 detail:
-                  'A single itemised figure before you commit, not a range. We notify you in advance of any variation, and explain why.',
+                  'A single package figure before you commit, not a range — surgeon, theatre, implant, room and stay. We call you before anything varies.',
               },
               {
                 icon: CreditCard,
-                title: 'Direct billing',
+                title: 'Cashless treatment',
                 detail:
-                  'We settle directly with all major Swiss insurers and most international policies, so you are not left reclaiming.',
+                  'We are empanelled with every major Indian insurer and TPA, plus CGHS, ESIC and PM-JAY, so you are not left reclaiming.',
               },
               {
                 icon: Clock,
-                title: 'Admission in 20 minutes',
+                title: 'Pre-authorisation in 4 hours',
                 detail:
-                  'Pre-registration online the day before means the paperwork is done when you arrive on the ward.',
+                  'Our insurance desk files your cashless request and follows it up — 89% are approved the same working day.',
               },
             ].map((item, i) => {
               const Icon = item.icon
@@ -164,7 +164,7 @@ export default function Patients() {
           </div>
 
           <Reveal delay={0.2} className="mt-14 border border-stone-200 bg-parchment p-8 lg:p-10">
-            <h3 className="eyebrow text-brass-600">Insurers we bill directly</h3>
+            <h3 className="eyebrow text-brass-600">Insurers and TPAs we are empanelled with</h3>
             <ul className="mt-6 flex flex-wrap gap-2.5">
               {insurers.map((ins) => (
                 <li key={ins} className="border border-stone-200 bg-ivory px-4 py-2 text-[0.875rem] text-pine-900/75">
@@ -173,8 +173,8 @@ export default function Patients() {
               ))}
             </ul>
             <p className="mt-6 text-[0.8125rem] text-pine-900/55">
-              Not listed? We still provide itemised invoices formatted for reimbursement in most countries. Ask our
-              billing office on {site.phone}.
+              Not listed? We still provide itemised invoices and discharge summaries formatted for reimbursement.
+              Ask our insurance desk on {site.phone}.
             </p>
           </Reveal>
         </Container>
@@ -185,7 +185,7 @@ export default function Patients() {
         <Container size="wide">
           <SectionHeading
             eyebrow="Preventive health"
-            title="Screening packages, reported the same day"
+            title="Health check packages, reported the same day"
             lead="Every package finishes with a physician consultation — a set of numbers without an interpretation is not a health check."
             align="center"
             className="text-center"

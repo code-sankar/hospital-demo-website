@@ -3,7 +3,7 @@ import { Clock, ArrowRight } from 'lucide-react'
 import ArtPanel from '../art/ArtPanel'
 
 const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
 
 export default function ArticleCard({ article, featured = false, index = 0 }) {
   return (

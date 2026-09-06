@@ -11,7 +11,7 @@ import { getArticle, articles } from '../data/articles'
 import { getDoctor } from '../data/doctors'
 
 const formatDate = (iso) =>
-  new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
+  new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })
 
 export default function ArticleDetail() {
   const { slug } = useParams()

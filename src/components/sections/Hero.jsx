@@ -15,9 +15,9 @@ const fade = {
 }
 
 const proof = [
-  { icon: ShieldCheck, label: 'JCI accredited', sub: 'Academic medical centre' },
-  { icon: Clock3, label: 'Seen in 5 days', sub: 'Median outpatient wait' },
-  { icon: Award, label: '96.4% would recommend', sub: '4,812 verified responses' },
+  { icon: ShieldCheck, label: 'NABH & JCI accredited', sub: 'Academic medical centre' },
+  { icon: Clock3, label: 'Seen in 3 days', sub: 'Median outpatient wait' },
+  { icon: Award, label: '96.4% would recommend', sub: '7,340 verified responses' },
 ]
 
 export default function Hero() {
@@ -61,8 +61,8 @@ export default function Hero() {
               variants={fade}
               className="mt-7 max-w-xl text-[1.0625rem] leading-relaxed text-pine-900/68"
             >
-              Thirteen specialist institutes, a 24-hour emergency department and an academic research faculty —
-              gathered on one campus so that your care is coordinated by people who already know your name.
+              Thirteen specialist institutes, a 24×7 emergency department and an academic faculty — gathered on one
+              Bengaluru campus so that your care is coordinated by people who already know your name.
             </motion.p>
 
             <motion.div
@@ -120,7 +120,7 @@ export default function Hero() {
           >
             <div className="relative mx-auto aspect-[4/5] w-full max-w-lg">
               <div className="arch absolute inset-0 overflow-hidden shadow-lift">
-                <ArtPanel variant="atrium" tone="deep" seed={9} arch={false} label="The Vitalis atrium" />
+                <ArtPanel variant="atrium" tone="deep" seed={9} arch={false} label={`The ${site.name} atrium`} />
               </div>
 
               {/* brass hairline frame, offset like a mounted print */}
@@ -137,7 +137,7 @@ export default function Hero() {
                 className="absolute -bottom-6 -left-4 w-60 border border-stone-200 bg-ivory p-5 shadow-card sm:-left-10"
               >
                 <p className="eyebrow text-brass-600">Emergency department</p>
-                <p className="mt-3 font-display text-[2.5rem] leading-none text-pine-900">21 min</p>
+                <p className="mt-3 font-display text-[2.5rem] leading-none text-pine-900">19 min</p>
                 <p className="mt-2 text-[0.75rem] leading-snug text-pine-900/55">
                   Median time from arrival to first clinical assessment
                 </p>
@@ -155,7 +155,7 @@ export default function Hero() {
                   <span className="relative inline-flex size-2 rounded-full bg-pine-600" />
                 </span>
                 <span className="text-[0.8125rem] text-pine-900/75">
-                  <span className="font-medium text-pine-900">268 consultants</span> on campus
+                  <span className="font-medium text-pine-900">312 consultants</span> on campus
                 </span>
               </motion.div>
             </div>

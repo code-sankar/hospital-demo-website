@@ -13,19 +13,19 @@ const actions = [
   {
     icon: Stethoscope,
     title: 'Find a doctor',
-    detail: 'Search 268 consultants by speciality, language or the condition you need treated.',
+    detail: 'Search 312 consultants by speciality, language or the condition you need treated.',
     to: '/doctors',
   },
   {
     icon: ClipboardList,
-    title: 'Health packages',
-    detail: 'Preventive screening from CHF 190, reported the same day by a physician.',
+    title: 'Health check packages',
+    detail: 'Preventive screening from ₹2,400, reported the same day by a physician.',
     to: '/patients#packages',
   },
   {
     icon: Ambulance,
     title: 'Emergency care',
-    detail: 'Open 24 hours. A consultant is physically present in the department at all times.',
+    detail: 'Open 24×7. A consultant is physically present in the department at every hour.',
     to: '/centres/emergency-critical-care',
     urgent: true,
   },

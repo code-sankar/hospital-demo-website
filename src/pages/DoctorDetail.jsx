@@ -131,7 +131,7 @@ export default function DoctorDetail() {
               <Reveal delay={0.14} className="mt-12">
                 <h3 className="eyebrow flex items-center gap-2.5 text-brass-600">
                   <GraduationCap className="size-4" aria-hidden="true" />
-                  Training & qualifications
+                  Qualifications & training
                 </h3>
                 <ul className="mt-6 divide-y divide-stone-200 border-y border-stone-200">
                   {doctor.education.map((e) => (
@@ -179,7 +179,7 @@ export default function DoctorDetail() {
                   </div>
                   <div className="flex items-start justify-between gap-4">
                     <dt className="text-pine-900/55">Consultation</dt>
-                    <dd className="text-right font-medium text-pine-900">45 minutes</dd>
+                    <dd className="text-right font-medium text-pine-900">30 minutes</dd>
                   </div>
                   <div className="flex items-start justify-between gap-4">
                     <dt className="text-pine-900/55">Video review</dt>
@@ -187,7 +187,7 @@ export default function DoctorDetail() {
                   </div>
                   <div className="flex items-start justify-between gap-4">
                     <dt className="text-pine-900/55">Insurance</dt>
-                    <dd className="text-right font-medium text-pine-900">Direct billing</dd>
+                    <dd className="text-right font-medium text-pine-900">Cashless</dd>
                   </div>
                 </dl>
 

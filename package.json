@@ -1,9 +1,9 @@
 {
-  "name": "vitalis-medical-centre-demo",
+  "name": "ashvini-hospital-demo",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Demo website for hospitals and healthcare centres — European-inspired medical design system built with Vite, React and Tailwind CSS.",
+  "description": "Demo website for Indian hospitals and healthcare centres — a European-inspired medical design system built with Vite, React and Tailwind CSS.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -6,11 +6,12 @@ import PageHeader from '../components/sections/PageHeader'
 import CTABand from '../components/sections/CTABand'
 import ArtPanel from '../components/art/ArtPanel'
 import { careers } from '../data/about'
+import { site } from '../data/site'
 
 const benefits = [
   { icon: GraduationCap, title: 'Protected teaching time', detail: 'Four hours a week, timetabled and defended — not the first thing cancelled when the ward is busy.' },
   { icon: Scale, title: 'Rotas published 12 weeks ahead', detail: 'You should be able to plan a life around this job, including the on-call weekends.' },
-  { icon: Baby, title: 'Genuine flexible working', detail: 'Part-time consultant posts, term-time contracts and on-site childcare from six months.' },
+  { icon: Baby, title: 'Genuine flexible working', detail: 'Part-time consultant posts, phased returns after maternity leave, and an on-site crèche from six months.' },
   { icon: HeartHandshake, title: 'Staff wellbeing that is real', detail: 'Confidential psychological support, a rest facility on every floor, and post-incident debriefs as standard.' },
 ]
 
@@ -20,7 +21,7 @@ export default function Careers() {
       <PageHeader
         eyebrow="Careers"
         title="Work somewhere the rota is published twelve weeks ahead"
-        lead="Ninety-two per cent of our clinical staff are still here a year later. That figure is the single thing we are proudest of, and it is not an accident."
+        lead="Ninety-one per cent of our clinical staff are still here a year later. In a sector where nursing attrition routinely runs past a third, that figure is the thing we are proudest of — and it is not an accident."
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Careers' }]}
         variant="colonnade"
         seed={22}
@@ -53,11 +54,11 @@ export default function Careers() {
             <Reveal delay={0.12}>
               <div className="relative aspect-4/5 w-full lg:sticky lg:top-32">
                 <div className="arch absolute inset-0 overflow-hidden shadow-lift">
-                  <ArtPanel variant="atrium" tone="pine" seed={26} arch={false} label="Vitalis staff areas" />
+                  <ArtPanel variant="atrium" tone="pine" seed={26} arch={false} label={`${site.name} staff areas`} />
                 </div>
                 <div className="arch pointer-events-none absolute -inset-3 border border-brass-500/30" aria-hidden="true" />
                 <div className="absolute -bottom-8 left-4 border border-stone-200 bg-ivory px-6 py-5 shadow-card">
-                  <p className="font-display text-[2.4rem] leading-none text-pine-900">92%</p>
+                  <p className="font-display text-[2.4rem] leading-none text-pine-900">91%</p>
                   <p className="mt-1.5 text-[0.75rem] tracking-wide text-pine-900/55">
                     Clinical staff retention, rolling year
                   </p>
@@ -99,8 +100,9 @@ export default function Careers() {
           </ul>
 
           <p className="mt-10 text-[0.8125rem] leading-relaxed text-pine-900/50">
-            Vitalis is an equal-opportunity employer. We welcome applications regardless of background, and we
-            guarantee an interview to any disabled applicant who meets the essential criteria.
+            {site.name} is an equal-opportunity employer. We welcome applications regardless of caste, religion,
+            gender or background, and we guarantee an interview to any applicant with a disability who meets the
+            essential criteria.
           </p>
         </Container>
       </section>

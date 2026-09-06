@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 /* ==========================================================================
-   Vitalis Medical Centre — design tokens
+   Ashvini Institute of Medical Sciences — design tokens
    A European clinical palette: deep pine & teal, warm ivory, brass accents.
    ========================================================================== */
 @theme {
@@ -36,9 +36,18 @@
   --color-clay-500: #b3402f;
   --color-clay-600: #963425;
 
-  /* Typography */
-  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* Typography.
+     Cormorant Garamond and Inter carry no Indic glyphs, and the site shows
+     Devanagari, Kannada, Tamil, Telugu, Malayalam, Bengali and Urdu strings.
+     Font stacks fall through per character, so naming the system Indic faces
+     here means those strings render properly on every mainstream OS instead of
+     relying on last-resort matching — and never as tofu boxes in a live demo. */
+  --font-indic: 'Noto Sans Devanagari', 'Noto Sans Kannada', 'Noto Sans Tamil', 'Noto Sans Telugu',
+    'Noto Sans Malayalam', 'Noto Sans Bengali', 'Noto Nastaliq Urdu', 'Nirmala UI', 'Kohinoor Devanagari',
+    'Devanagari Sangam MN', 'Kannada Sangam MN', 'Tamil Sangam MN', 'Telugu Sangam MN', 'Malayalam Sangam MN',
+    'Bangla Sangam MN', 'Geeza Pro';
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', var(--font-indic), serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, var(--font-indic), sans-serif;
 
   /* Motion */
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);

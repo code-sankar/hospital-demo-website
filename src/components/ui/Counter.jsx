@@ -34,7 +34,7 @@ export default function Counter({ value, suffix = '', duration = 1600, className
 
   return (
     <span ref={ref} className={className}>
-      {display.toLocaleString('en-GB')}
+      {display.toLocaleString('en-IN')}
       {suffix}
     </span>
   )

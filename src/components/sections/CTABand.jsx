@@ -49,9 +49,9 @@ export default function CTABand({
               {site.phone}
             </a>
             <p className="text-[0.75rem] text-pine-100/45 lg:text-right">
-              Mon – Fri 07:30 – 20:00 · Sat 08:00 – 14:00
+              Mon – Sat 8:00 am – 8:00 pm · Sun 9:00 am – 1:00 pm
               <br />
-              Emergency department open 24 hours
+              Emergency department open 24×7
             </p>
           </Reveal>
         </div>

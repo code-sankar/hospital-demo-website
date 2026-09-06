@@ -6,7 +6,7 @@ import Logo from '../art/Logo'
 import TopBar from './TopBar'
 import MegaMenu from './MegaMenu'
 import MobileMenu from './MobileMenu'
-import { navigation } from '../../data/site'
+import { navigation, site } from '../../data/site'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(() => window.scrollY > 12)
@@ -70,7 +70,7 @@ export default function Header() {
         >
           <Container size="wide">
             <div className={`flex items-center justify-between transition-all duration-500 ${scrolled ? 'h-18' : 'h-22'}`}>
-              <Link to="/" aria-label={`${'Vitalis'} home`} className="shrink-0">
+              <Link to="/" aria-label={`${site.name} home`} className="shrink-0">
                 <Logo compact={scrolled} />
               </Link>
 
