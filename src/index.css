@@ -1,0 +1,264 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   Vitalis Medical Centre — design tokens
+   A European clinical palette: deep pine & teal, warm ivory, brass accents.
+   ========================================================================== */
+@theme {
+  /* Brand — deep clinical greens */
+  --color-pine-50: #f1f6f5;
+  --color-pine-100: #dde9e7;
+  --color-pine-200: #bcd3cf;
+  --color-pine-300: #93b7b1;
+  --color-pine-400: #679690;
+  --color-pine-500: #497a74;
+  --color-pine-600: #14625e;
+  --color-pine-700: #0e3b38;
+  --color-pine-800: #0b2e2c;
+  --color-pine-900: #10211f;
+  --color-pine-950: #071615;
+
+  /* Warm neutrals — parchment & stone */
+  --color-ivory: #fbf8f3;
+  --color-parchment: #f4efe6;
+  --color-stone-100: #ece6da;
+  --color-stone-200: #ded6c7;
+  --color-stone-300: #c6bcab;
+  --color-stone-400: #9d9384;
+  --color-stone-500: #7c7264;
+
+  /* Accents — brass for prestige, clay for urgency */
+  --color-brass-300: #d8bd90;
+  --color-brass-400: #c6a068;
+  --color-brass-500: #b08a4f;
+  --color-brass-600: #90703e;
+  --color-clay-400: #c96b57;
+  --color-clay-500: #b3402f;
+  --color-clay-600: #963425;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Elevation — soft, warm shadows rather than grey */
+  --shadow-card: 0 1px 2px rgba(16, 33, 31, 0.04), 0 12px 32px -12px rgba(16, 33, 31, 0.14);
+  --shadow-lift: 0 2px 4px rgba(16, 33, 31, 0.05), 0 28px 56px -20px rgba(16, 33, 31, 0.22);
+
+  /* Extra breakpoint for very wide displays */
+  --breakpoint-3xl: 96rem;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+@layer base {
+  * {
+    border-color: var(--color-stone-200);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-pine-900);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Focus ring — visible, on-brand, never removed */
+  :focus-visible {
+    outline: 2px solid var(--color-brass-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-pine-700);
+    color: var(--color-ivory);
+  }
+
+  /* Slim, warm scrollbar */
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-parchment);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-stone-300);
+    border: 3px solid var(--color-parchment);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-pine-400);
+  }
+}
+
+/* ==========================================================================
+   Reusable component classes
+   ========================================================================== */
+@layer components {
+  /* The small-caps label that sits above almost every section heading —
+     a signature of the European editorial look. */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  /* Thin rule with a brass tick, used to separate editorial blocks */
+  .rule-brass {
+    position: relative;
+    height: 1px;
+    background: var(--color-stone-200);
+  }
+  .rule-brass::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    height: 1px;
+    background: var(--color-brass-500);
+  }
+
+  /* Arch — the recurring European architectural motif */
+  .arch {
+    border-top-left-radius: 999px;
+    border-top-right-radius: 999px;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s var(--ease-out-soft);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+@layer utilities {
+  /* Fine paper grain — keeps large ivory areas from looking flat */
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
+  }
+
+  /* Hairline grid used behind hero + CTA bands */
+  .bg-hairline {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 88px 88px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Horizontal chip rails read better without a visible track */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+
+  /* Entrance animation used by <Reveal /> when JS motion is unavailable */
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-rise {
+    animation: rise 0.7s var(--ease-out-soft) both;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 42s linear infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.85);
+      opacity: 0.6;
+    }
+    70% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  .animate-pulse-ring {
+    animation: pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}

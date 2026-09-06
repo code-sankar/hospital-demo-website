@@ -1,0 +1,763 @@
+/**
+ * Centres of excellence. Each entry drives both the listing card and the
+ * full detail page at /centres/:slug — add an object here and the route,
+ * navigation and sitemap all pick it up automatically.
+ */
+export const departments = [
+  {
+    slug: 'cardiac-sciences',
+    name: 'Cardiac Sciences',
+    icon: 'HeartPulse',
+    art: 'cardio',
+    tagline: 'Structural heart, electrophysiology and preventive cardiology',
+    summary:
+      'A dedicated heart institute running two hybrid theatres, a 12-bed coronary care unit and a nurse-led rehabilitation programme — with door-to-balloon times consistently under 60 minutes.',
+    overview:
+      'The Vitalis Institute of Cardiac Sciences treats the full spectrum of heart disease, from first-episode chest pain through to advanced heart failure and transplantation work-up. Our chest-pain pathway is certified by the European Society of Cardiology, and every complex case is reviewed by a joint cardiology–cardiac surgery board before intervention. Patients are supported by a named cardiac nurse from admission through the twelve-week rehabilitation programme.',
+    established: 1968,
+    beds: 46,
+    consultants: 24,
+    procedures: '3,400 procedures a year',
+    highlights: [
+      'Two hybrid catheterisation theatres with intra-operative CT',
+      'Primary angioplasty available 24 hours, median door-to-balloon 47 minutes',
+      'Transcatheter aortic valve implantation (TAVI) and MitraClip programme',
+      'Complex arrhythmia ablation with 3D electro-anatomical mapping',
+      'Nurse-led heart-failure clinic and 12-week cardiac rehabilitation',
+    ],
+    treatments: [
+      'Coronary angiography & angioplasty',
+      'Coronary artery bypass grafting (CABG)',
+      'Transcatheter aortic valve implantation',
+      'Pacemaker & ICD implantation',
+      'Catheter ablation for atrial fibrillation',
+      'Heart-failure device therapy (CRT)',
+      'Preventive cardiology & lipid clinic',
+      'Adult congenital heart disease',
+    ],
+    technology: [
+      { name: 'Hybrid theatre suite', detail: 'Siemens-class robotic angiography with intra-operative imaging' },
+      { name: '3D cardiac mapping', detail: 'Sub-millimetre arrhythmia localisation before ablation' },
+      { name: 'Cardiac MRI', detail: '3T scanner with tissue characterisation and stress perfusion' },
+    ],
+    pathway: [
+      { step: 'Referral or self-booking', detail: 'Same-week appointments for chest pain and palpitations.' },
+      { step: 'Diagnostic morning', detail: 'ECG, echocardiogram and bloods completed in a single visit.' },
+      { step: 'Consultant review', detail: 'Findings discussed the same afternoon with a written plan.' },
+      { step: 'Intervention', detail: 'Day-case angioplasty or scheduled surgery with a named nurse.' },
+      { step: 'Rehabilitation', detail: 'Twelve supervised sessions, then annual surveillance.' },
+    ],
+    faqs: [
+      {
+        q: 'Do I need a referral to see a cardiologist?',
+        a: 'No. You may book directly through our appointments desk. If you hold private insurance, a GP referral letter can help with reimbursement — our billing team will advise you before the visit.',
+      },
+      {
+        q: 'How quickly can chest pain be assessed?',
+        a: 'Our rapid-access chest-pain clinic offers appointments within five working days. If your symptoms are current or severe, attend the Emergency Department immediately — do not wait for a clinic slot.',
+      },
+      {
+        q: 'Is angioplasty a day-case procedure?',
+        a: 'For most elective patients, yes. Admission is at 07:00 with discharge the same evening, provided radial access is used and observations are stable.',
+      },
+    ],
+  },
+  {
+    slug: 'neurosciences',
+    name: 'Neurosciences',
+    icon: 'Brain',
+    art: 'neuro',
+    tagline: 'Stroke medicine, neurosurgery and epilepsy care',
+    summary:
+      'A hyper-acute stroke unit with 24/7 thrombectomy, a surgical epilepsy programme and an intra-operative MRI theatre for tumour and functional neurosurgery.',
+    overview:
+      'Neurological illness is rarely a single event, so our institute is built around continuity: the consultant who meets you in the acute phase follows you through rehabilitation and long-term surveillance. The hyper-acute stroke unit accepts direct ambulance admissions with a CT scanner inside the resuscitation bay, and our multidisciplinary epilepsy team reviews every candidate for surgery at a weekly video-telemetry conference.',
+    established: 1979,
+    beds: 38,
+    consultants: 19,
+    procedures: '1,150 neurosurgical cases a year',
+    highlights: [
+      'Hyper-acute stroke unit with mechanical thrombectomy around the clock',
+      'Intra-operative MRI for maximal safe tumour resection',
+      'Awake craniotomy with speech and motor mapping',
+      'Five-bed video-EEG telemetry unit for epilepsy work-up',
+      'Deep brain stimulation for Parkinson’s disease and dystonia',
+    ],
+    treatments: [
+      'Mechanical thrombectomy & thrombolysis',
+      'Brain and spinal tumour surgery',
+      'Deep brain stimulation',
+      'Epilepsy surgery & vagus nerve stimulation',
+      'Endovascular aneurysm coiling',
+      'Multiple sclerosis infusion service',
+      'Neuro-rehabilitation & spasticity clinic',
+      'Headache and neuralgia clinic',
+    ],
+    technology: [
+      { name: 'Intra-operative MRI', detail: 'Confirms complete resection before the patient leaves theatre' },
+      { name: 'Neuronavigation', detail: 'Frameless stereotaxy with tractography overlay' },
+      { name: 'Video-EEG telemetry', detail: 'Continuous monitoring to localise seizure onset' },
+    ],
+    pathway: [
+      { step: 'Emergency or clinic entry', detail: 'Direct ambulance pre-alert bypasses the waiting room.' },
+      { step: 'Imaging within 20 minutes', detail: 'CT and CT-angiography at the bedside in resus.' },
+      { step: 'Multidisciplinary decision', detail: 'Neurologist, neurosurgeon and radiologist agree the plan.' },
+      { step: 'Treatment', detail: 'Thrombolysis, thrombectomy or surgery as indicated.' },
+      { step: 'Rehabilitation', detail: 'Therapy begins on day one and continues at home.' },
+    ],
+    faqs: [
+      {
+        q: 'What are the warning signs of a stroke?',
+        a: 'Remember FAST — Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Every minute without treatment costs roughly 1.9 million neurons, so call immediately rather than waiting to see if symptoms settle.',
+      },
+      {
+        q: 'How long is the wait for a neurology outpatient appointment?',
+        a: 'Routine appointments are typically offered within two weeks; suspected first seizure, new severe headache and suspected MS relapse are seen within 72 hours.',
+      },
+      {
+        q: 'Will I be awake during brain surgery?',
+        a: 'Only where it improves safety. Awake craniotomy is used when a tumour sits close to speech or motor areas, so that function can be tested live during resection. You are sedated for the painful parts and remember very little.',
+      },
+    ],
+  },
+  {
+    slug: 'oncology',
+    name: 'Oncology & Haematology',
+    icon: 'Ribbon',
+    art: 'onco',
+    tagline: 'Precision cancer therapy and molecular tumour boards',
+    summary:
+      'An OECI-designated comprehensive cancer centre offering genomic profiling, immunotherapy, image-guided radiotherapy and a survivorship programme.',
+    overview:
+      'Every new cancer diagnosis at Vitalis is presented to a molecular tumour board within seven days — a panel of oncologists, surgeons, radiologists, pathologists and a clinical geneticist who agree one plan and one named point of contact. Genomic profiling is standard, not exceptional, and the results guide access to more than forty open clinical trials.',
+    established: 1991,
+    beds: 52,
+    consultants: 31,
+    procedures: '2,900 new diagnoses a year',
+    highlights: [
+      'Molecular tumour board convened within seven days of diagnosis',
+      'Comprehensive genomic profiling included in the standard pathway',
+      'Stereotactic body radiotherapy and adaptive planning',
+      'Day-case chemotherapy suite with 22 recliners and a quiet room',
+      'Psycho-oncology, dietetics and fertility preservation on site',
+    ],
+    treatments: [
+      'Medical oncology & immunotherapy',
+      'Stereotactic and image-guided radiotherapy',
+      'Haemato-oncology & stem-cell transplant',
+      'Breast, colorectal and thoracic surgical oncology',
+      'Interventional oncology (ablation, embolisation)',
+      'Clinical trials & early-phase therapeutics',
+      'Palliative and supportive care',
+      'Cancer genetics & risk-reduction clinic',
+    ],
+    technology: [
+      { name: 'Linear accelerator suite', detail: 'Two machines with surface-guided patient positioning' },
+      { name: 'PET-CT', detail: 'Digital detector system for staging and response assessment' },
+      { name: 'Next-generation sequencing', detail: 'In-house 523-gene panel, results in ten days' },
+    ],
+    pathway: [
+      { step: 'Rapid diagnostic clinic', detail: 'Imaging and biopsy completed within one week.' },
+      { step: 'Molecular profiling', detail: 'Tissue sequenced alongside routine pathology.' },
+      { step: 'Tumour board', detail: 'A single agreed plan, explained to you in writing.' },
+      { step: 'Treatment', detail: 'Surgery, systemic therapy or radiotherapy with a key worker.' },
+      { step: 'Survivorship', detail: 'Structured follow-up, rehabilitation and late-effects clinic.' },
+    ],
+    faqs: [
+      {
+        q: 'How soon will I receive my diagnosis?',
+        a: 'Our rapid diagnostic clinic aims to complete imaging and biopsy within seven days of the first appointment, with results discussed face-to-face rather than by telephone.',
+      },
+      {
+        q: 'Can I bring someone to chemotherapy?',
+        a: 'Yes — one companion is welcome in the day suite. We also run a volunteer companion service for patients attending alone.',
+      },
+      {
+        q: 'Do you offer second opinions?',
+        a: 'We do, and we encourage them. Send your imaging and pathology reports to our oncology desk and a consultant will review them, usually within five working days.',
+      },
+    ],
+  },
+  {
+    slug: 'orthopaedics',
+    name: 'Orthopaedics & Sports Medicine',
+    icon: 'Bone',
+    art: 'ortho',
+    tagline: 'Robotic joint replacement, spine and sports injury',
+    summary:
+      'Robot-assisted hip and knee arthroplasty with an enhanced-recovery pathway that has most patients walking within four hours of surgery.',
+    overview:
+      'Our orthopaedic institute combines high-volume elective arthroplasty with a sports medicine practice that treats professional and recreational athletes. Robotic assistance allows implant positioning within one degree of plan, and the enhanced-recovery protocol — pre-habilitation, regional anaesthesia and same-day mobilisation — has reduced average length of stay to 1.4 nights.',
+    established: 1957,
+    beds: 44,
+    consultants: 22,
+    procedures: '4,100 operations a year',
+    highlights: [
+      'Robot-assisted total hip and knee replacement',
+      'Enhanced recovery: median length of stay 1.4 nights',
+      'Arthroscopic shoulder, hip and knee reconstruction',
+      'Motion-analysis laboratory for gait and return-to-sport testing',
+      'Spinal deformity and minimally invasive decompression',
+    ],
+    treatments: [
+      'Total hip & knee arthroplasty',
+      'Revision joint surgery',
+      'ACL and meniscal reconstruction',
+      'Rotator cuff and shoulder stabilisation',
+      'Spinal decompression & fusion',
+      'Foot and ankle reconstruction',
+      'Paediatric orthopaedics',
+      'Sports physiotherapy & return-to-play',
+    ],
+    technology: [
+      { name: 'Surgical robotics', detail: 'CT-based planning with haptic boundary control' },
+      { name: 'Motion-analysis lab', detail: 'Force plates and optical capture for gait assessment' },
+      { name: 'Weight-bearing CT', detail: 'Images the joint under real load, not lying down' },
+    ],
+    pathway: [
+      { step: 'Assessment', detail: 'Consultation, imaging and a shared decision on surgery.' },
+      { step: 'Pre-habilitation', detail: 'Four weeks of guided strengthening before the date.' },
+      { step: 'Surgery', detail: 'Robot-assisted procedure under regional anaesthesia.' },
+      { step: 'Same-day mobilisation', detail: 'Standing and walking within four hours.' },
+      { step: 'Rehabilitation', detail: 'Physiotherapy at six weeks, function review at one year.' },
+    ],
+    faqs: [
+      {
+        q: 'How long does a knee replacement last?',
+        a: 'Contemporary implants have a 90–95% survival rate at fifteen years. Robotic alignment aims to improve that further by placing the components within a degree of the plan.',
+      },
+      {
+        q: 'When can I drive after hip surgery?',
+        a: 'Most patients resume driving between four and six weeks, once they can perform an emergency stop without hesitation. Your surgeon will confirm at the six-week review.',
+      },
+      {
+        q: 'Do you treat sports injuries without surgery?',
+        a: 'The majority of what we see is managed conservatively. Our physiotherapy and sports-medicine team leads the pathway, and surgery is offered only when it clearly outperforms rehabilitation.',
+      },
+    ],
+  },
+  {
+    slug: 'women-newborn',
+    name: 'Women & Newborn',
+    icon: 'Baby',
+    art: 'maternity',
+    tagline: 'Midwife-led birthing, fetal medicine and neonatal intensive care',
+    summary:
+      'Six birthing suites with birthing pools, a level-3 neonatal unit on the same floor, and continuity-of-carer midwifery from booking through to six weeks postnatal.',
+    overview:
+      'Our maternity service is built on continuity: you meet a small midwifery team early in pregnancy and the same team supports your birth. Birthing suites are designed to feel domestic rather than clinical — dimmable light, pools, and space for partners to stay overnight — while a level-3 neonatal intensive care unit and an obstetric theatre sit metres away should they be needed.',
+    established: 1936,
+    beds: 58,
+    consultants: 26,
+    procedures: '2,600 births a year',
+    highlights: [
+      'Continuity-of-carer midwifery teams from booking to postnatal',
+      'Six birthing suites, four with birthing pools',
+      'Level-3 neonatal intensive care with 18 cots',
+      'Fetal medicine unit for high-risk and multiple pregnancy',
+      'WHO/UNICEF Baby-Friendly accredited infant feeding support',
+    ],
+    treatments: [
+      'Antenatal care & fetal medicine',
+      'Midwife-led and consultant-led birth',
+      'Elective and emergency caesarean section',
+      'Neonatal intensive & special care',
+      'Gynaecological surgery (laparoscopic)',
+      'Fertility assessment & IVF referral',
+      'Menopause & pelvic health clinic',
+      'Perinatal mental-health support',
+    ],
+    technology: [
+      { name: 'Fetal medicine imaging', detail: 'High-resolution 4D ultrasound with Doppler studies' },
+      { name: 'Central CTG monitoring', detail: 'Every trace reviewed hourly by a second clinician' },
+      { name: 'Neonatal cooling therapy', detail: 'Therapeutic hypothermia for hypoxic injury' },
+    ],
+    pathway: [
+      { step: 'Booking visit', detail: 'By ten weeks, with your named midwifery team.' },
+      { step: 'Antenatal care', detail: 'Scans, screening and education classes on campus.' },
+      { step: 'Birth', detail: 'Your choice of suite, supported by the team you know.' },
+      { step: 'Postnatal ward', detail: 'Private rooms with partner beds and feeding support.' },
+      { step: 'Community follow-up', detail: 'Home visits to six weeks, then a health review.' },
+    ],
+    faqs: [
+      {
+        q: 'Can my partner stay overnight?',
+        a: 'Yes. Every postnatal room has a companion bed, and partners are welcome throughout labour and the postnatal stay without visiting-hour restrictions.',
+      },
+      {
+        q: 'What if I need a caesarean?',
+        a: 'The obstetric theatre adjoins the birthing suites. Where a caesarean is planned, we offer a gentle-caesarean approach — lowered screen, immediate skin-to-skin and delayed cord clamping where safe.',
+      },
+      {
+        q: 'Do you take high-risk pregnancies?',
+        a: 'Yes. Our fetal medicine unit manages multiple pregnancy, growth restriction, maternal cardiac disease and diabetes, jointly with the relevant specialist institute.',
+      },
+    ],
+  },
+  {
+    slug: 'emergency-critical-care',
+    name: 'Emergency & Critical Care',
+    icon: 'Ambulance',
+    art: 'emergency',
+    tagline: 'Round-the-clock resuscitation, trauma and intensive care',
+    summary:
+      'A 24/7 emergency department with four resuscitation bays, a CT scanner inside the department and a consultant physically present at all hours.',
+    overview:
+      'Emergency care at Vitalis is consultant-delivered rather than consultant-supervised: a senior physician is on the floor at every hour of every day. Triage is completed within eight minutes of arrival, and the department holds its own CT scanner, point-of-care laboratory and ultrasound so that critical decisions are not delayed by transport.',
+    established: 1924,
+    beds: 34,
+    consultants: 28,
+    procedures: '52,000 attendances a year',
+    highlights: [
+      'Consultant physically present in the department 24 hours a day',
+      'Triage within eight minutes; median time to first assessment 21 minutes',
+      'CT scanner and point-of-care laboratory inside the department',
+      'Separate paediatric emergency area with its own entrance',
+      '20-bed intensive care unit with 1:1 nursing',
+    ],
+    treatments: [
+      'Adult & paediatric emergency medicine',
+      'Major trauma resuscitation',
+      'Acute stroke & cardiac pathways',
+      'Intensive & high-dependency care',
+      'Emergency surgery',
+      'Toxicology & poisons advice',
+      'Observation & ambulatory emergency care',
+      'Critical-care retrieval and transfer',
+    ],
+    technology: [
+      { name: 'In-department CT', detail: 'Scanning without leaving the resuscitation area' },
+      { name: 'Point-of-care laboratory', detail: 'Blood gases and troponin in under seven minutes' },
+      { name: 'Tele-critical care', detail: 'Remote intensivist review for referring hospitals' },
+    ],
+    pathway: [
+      { step: 'Arrival', detail: 'Walk-in or ambulance; pre-alerts bypass the waiting area.' },
+      { step: 'Triage in 8 minutes', detail: 'A senior nurse assigns priority and starts investigations.' },
+      { step: 'Senior assessment', detail: 'Consultant-led decision-making from the first review.' },
+      { step: 'Definitive care', detail: 'Theatre, catheter lab, ICU or ward within the hour.' },
+      { step: 'Discharge & follow-up', detail: 'Written summary sent to your GP the same day.' },
+    ],
+    faqs: [
+      {
+        q: 'When should I attend the Emergency Department?',
+        a: 'For chest pain, stroke symptoms, severe breathlessness, serious injury, heavy bleeding or sudden severe pain. For minor illness, our urgent-care clinic and GP partners will see you far more quickly.',
+      },
+      {
+        q: 'Will I be seen faster if I arrive by ambulance?',
+        a: 'Not automatically — patients are seen in order of clinical priority, not arrival method. Ambulance pre-alerts do help us prepare for time-critical conditions such as stroke and major trauma.',
+      },
+      {
+        q: 'Can a relative stay with me?',
+        a: 'One relative may accompany you in most areas, and parents stay with children at all times. During active resuscitation we may ask you to wait briefly nearby.',
+      },
+    ],
+  },
+  {
+    slug: 'internal-medicine',
+    name: 'Internal Medicine & Diabetes',
+    icon: 'Stethoscope',
+    art: 'internal',
+    tagline: 'General medicine, endocrinology and complex diagnostics',
+    summary:
+      'The diagnostic home for symptoms that do not fit neatly into one speciality — plus a structured diabetes service with dedicated foot and eye screening.',
+    overview:
+      'Internal medicine is where undifferentiated illness is untangled. Our physicians run a complex-diagnostics clinic for patients who have been passed between specialities, and a structured diabetes programme combining endocrinology, dietetics, podiatry and retinal screening in a single appointment block.',
+    established: 1924,
+    beds: 62,
+    consultants: 27,
+    procedures: '18,000 consultations a year',
+    highlights: [
+      'Complex diagnostics clinic for undifferentiated symptoms',
+      'One-stop diabetes review: endocrinology, feet, eyes and diet',
+      'Continuous glucose monitoring and insulin pump service',
+      'Hypertension and lipid optimisation clinic',
+      'Rapid-access clinic for GP referrals within 48 hours',
+    ],
+    treatments: [
+      'General internal medicine',
+      'Diabetes & endocrinology',
+      'Thyroid and adrenal disorders',
+      'Hypertension & lipid management',
+      'Obesity and metabolic medicine',
+      'Infectious diseases',
+      'Rheumatology & autoimmune disease',
+      'Preventive health assessment',
+    ],
+    technology: [
+      { name: 'Continuous glucose monitoring', detail: 'Cloud-linked sensors reviewed between visits' },
+      { name: 'Retinal screening', detail: 'AI-assisted grading with same-visit results' },
+      { name: 'Body composition analysis', detail: 'DEXA for metabolic and nutritional assessment' },
+    ],
+    pathway: [
+      { step: 'Referral', detail: 'GP referral or direct booking, seen within 48 hours if urgent.' },
+      { step: 'One-stop workup', detail: 'Bloods, imaging and physiology in a single morning.' },
+      { step: 'Diagnosis', detail: 'A single physician owns the case until it is resolved.' },
+      { step: 'Treatment plan', detail: 'Shared with you and your GP in plain language.' },
+      { step: 'Structured review', detail: 'Scheduled follow-up, not open-ended discharge.' },
+    ],
+    faqs: [
+      {
+        q: 'I have symptoms but no diagnosis. Can you help?',
+        a: 'That is precisely what our complex-diagnostics clinic exists for. Bring every previous report you have — a single physician will take ownership of the case rather than referring you onward again.',
+      },
+      {
+        q: 'How often should diabetes be reviewed?',
+        a: 'At least annually, and every three to six months if control is changing or you are adjusting therapy. Our one-stop clinic completes the full annual review in a single two-hour visit.',
+      },
+      {
+        q: 'Do you offer preventive health checks?',
+        a: 'Yes — three tiers of screening package, from a CHF 190 essentials panel to a comprehensive executive assessment with imaging and cardiology review.',
+      },
+    ],
+  },
+  {
+    slug: 'diagnostics-imaging',
+    name: 'Diagnostics & Imaging',
+    icon: 'Scan',
+    art: 'imaging',
+    tagline: 'Radiology, pathology and rapid reporting',
+    summary:
+      'MRI, CT, PET-CT, ultrasound and a fully accredited laboratory — with routine results reported within 24 hours and urgent studies within the hour.',
+    overview:
+      'Diagnostics underpins every other institute, so we treat reporting speed as a clinical outcome in its own right. Sub-specialist radiologists report within their own field, urgent studies are turned around within sixty minutes, and images are released to you through the patient portal at the same moment they reach your consultant.',
+    established: 1962,
+    beds: 0,
+    consultants: 21,
+    procedures: '140,000 studies a year',
+    highlights: [
+      'Sub-specialist reporting — the reporter matches the body system',
+      'Urgent studies reported within 60 minutes, routine within 24 hours',
+      'Open-bore 3T MRI for claustrophobic and larger patients',
+      'Low-dose CT protocols with iterative reconstruction',
+      'Patient portal releases images and reports directly to you',
+    ],
+    treatments: [
+      'MRI (1.5T and 3T)',
+      'Computed tomography & CT angiography',
+      'PET-CT and nuclear medicine',
+      'Ultrasound & elastography',
+      'Digital mammography & tomosynthesis',
+      'Image-guided biopsy & drainage',
+      'Clinical laboratory & histopathology',
+      'Cardiac and neuro-imaging',
+    ],
+    technology: [
+      { name: 'Open-bore 3T MRI', detail: 'Wider aperture, shorter sequences, less anxiety' },
+      { name: 'Digital PET-CT', detail: 'Lower tracer dose with higher lesion detectability' },
+      { name: 'AI triage', detail: 'Flags critical findings to the reporter queue first' },
+    ],
+    pathway: [
+      { step: 'Booking', detail: 'Most scans offered within three working days.' },
+      { step: 'Preparation', detail: 'Written instructions and a call the day before.' },
+      { step: 'The scan', detail: 'Radiographer-led, typically 20–45 minutes.' },
+      { step: 'Reporting', detail: 'Sub-specialist radiologist reports within 24 hours.' },
+      { step: 'Results', detail: 'Released to your portal and your referring clinician together.' },
+    ],
+    faqs: [
+      {
+        q: 'Can I get a scan without a referral?',
+        a: 'Certain screening studies can be booked directly, but most scans require a clinical referral so that the right protocol is used and the result can be acted upon safely.',
+      },
+      {
+        q: 'I am claustrophobic — can I still have an MRI?',
+        a: 'Yes. Our open-bore 3T scanner has a considerably wider aperture, we offer music and mirrored prisms, and mild sedation is available if needed. Tell the booking team in advance.',
+      },
+      {
+        q: 'How do I get my images?',
+        a: 'Reports and full-resolution images are released to the patient portal, and you may download them or share a secure link with another clinician at no charge.',
+      },
+    ],
+  },
+  {
+    slug: 'gastroenterology',
+    name: 'Gastroenterology & Hepatology',
+    icon: 'Activity',
+    art: 'gastro',
+    tagline: 'Endoscopy, liver disease and inflammatory bowel care',
+    summary:
+      'A JAG-standard endoscopy unit with four rooms, an IBD biologics service and a nurse-led liver clinic for fibrosis surveillance.',
+    overview:
+      'Our gastroenterology institute pairs a high-throughput endoscopy unit with long-term condition management. Inflammatory bowel disease patients hold a direct line to an IBD nurse and can escalate therapy without waiting for a routine clinic slot, while the hepatology service runs non-invasive fibrosis surveillance for fatty liver and viral hepatitis.',
+    established: 1974,
+    beds: 26,
+    consultants: 16,
+    procedures: '9,800 endoscopies a year',
+    highlights: [
+      'Four endoscopy rooms with CO₂ insufflation and AI polyp detection',
+      'IBD helpline with same-day nurse response',
+      'Non-invasive liver fibrosis assessment (FibroScan)',
+      'Endoscopic ultrasound and ERCP for pancreatobiliary disease',
+      'Bowel-cancer screening with next-day results',
+    ],
+    treatments: [
+      'Gastroscopy & colonoscopy',
+      'Endoscopic ultrasound & ERCP',
+      'Inflammatory bowel disease & biologics',
+      'Coeliac disease clinic',
+      'Chronic liver disease & hepatitis',
+      'Irritable bowel & functional gut disorders',
+      'Nutrition and home enteral feeding',
+      'Bowel-cancer screening',
+    ],
+    technology: [
+      { name: 'AI-assisted colonoscopy', detail: 'Real-time polyp detection raises adenoma yield' },
+      { name: 'FibroScan', detail: 'Liver stiffness measured without a biopsy' },
+      { name: 'Capsule endoscopy', detail: 'Small-bowel imaging without sedation' },
+    ],
+    pathway: [
+      { step: 'Clinic assessment', detail: 'Symptom review and targeted investigation.' },
+      { step: 'Endoscopy', detail: 'Day case with sedation or throat spray, your choice.' },
+      { step: 'Histology', detail: 'Biopsies reported within five working days.' },
+      { step: 'Treatment', detail: 'Medical therapy, biologics or therapeutic endoscopy.' },
+      { step: 'Long-term care', detail: 'Nurse-led review with an open helpline.' },
+    ],
+    faqs: [
+      {
+        q: 'Is colonoscopy uncomfortable?',
+        a: 'Most patients describe pressure rather than pain. We use CO₂ insufflation, which clears far faster than air, and you may choose sedation, gas-and-air or neither.',
+      },
+      {
+        q: 'How long does bowel preparation take?',
+        a: 'The regime starts the day before and takes about six hours to complete. Detailed instructions and a low-residue food list are posted to you at booking.',
+      },
+      {
+        q: 'Can I self-refer for bowel-cancer screening?',
+        a: 'Yes, from age 45 or earlier if you have a family history. A nurse will call to take a history and check that colonoscopy is the right test for you.',
+      },
+    ],
+  },
+  {
+    slug: 'renal-urology',
+    name: 'Renal & Urology',
+    icon: 'Droplets',
+    art: 'renal',
+    tagline: 'Dialysis, transplantation and robotic urological surgery',
+    summary:
+      'A 24-station dialysis unit, a living-donor kidney transplant programme and robot-assisted surgery for prostate, kidney and bladder disease.',
+    overview:
+      'The renal institute covers the full course of kidney disease — early detection in the chronic kidney disease clinic, dialysis (in-centre, home and nocturnal) and transplantation, including living-donor work-up. Our urology team performs robot-assisted prostatectomy and partial nephrectomy, with a one-stop haematuria clinic that completes cystoscopy and imaging in a single visit.',
+    established: 1983,
+    beds: 30,
+    consultants: 18,
+    procedures: '38,000 dialysis sessions a year',
+    highlights: [
+      '24-station dialysis unit with twilight and nocturnal shifts',
+      'Home haemodialysis and peritoneal dialysis training',
+      'Living-donor kidney transplant programme',
+      'Robot-assisted prostatectomy and partial nephrectomy',
+      'One-stop haematuria clinic — cystoscopy and imaging in one visit',
+    ],
+    treatments: [
+      'Chronic kidney disease management',
+      'Haemodialysis & peritoneal dialysis',
+      'Kidney transplantation',
+      'Robot-assisted urological surgery',
+      'Kidney-stone management & lithotripsy',
+      'Prostate assessment (MRI-guided biopsy)',
+      'Incontinence & pelvic floor clinic',
+      'Andrology and male health',
+    ],
+    technology: [
+      { name: 'Surgical robotics', detail: 'Nerve-sparing prostatectomy with 3D magnification' },
+      { name: 'MRI-guided fusion biopsy', detail: 'Targets suspicious zones instead of random sampling' },
+      { name: 'Home dialysis telemetry', detail: 'Machines report to the unit each night' },
+    ],
+    pathway: [
+      { step: 'Detection', detail: 'CKD identified early through routine blood screening.' },
+      { step: 'Nephrology clinic', detail: 'Slowing progression with blood pressure and drug therapy.' },
+      { step: 'Modality choice', detail: 'Unhurried education on dialysis and transplant options.' },
+      { step: 'Treatment', detail: 'In-centre, home dialysis or transplantation.' },
+      { step: 'Lifelong follow-up', detail: 'Transplant surveillance and medication management.' },
+    ],
+    faqs: [
+      {
+        q: 'Can I dialyse at home?',
+        a: 'Many patients can. We run a four-week training programme for both home haemodialysis and peritoneal dialysis, with 24-hour technical support and machines that report to the unit each night.',
+      },
+      {
+        q: 'How long is the transplant work-up?',
+        a: 'A living-donor work-up typically takes eight to twelve weeks from first appointment to surgery date, including cardiac assessment, tissue typing and an independent ethics review.',
+      },
+      {
+        q: 'Is a prostate biopsy always needed after a raised PSA?',
+        a: 'No. We perform MRI first — if the scan is reassuring, biopsy can often be avoided entirely, and where it is needed the MRI targets the biopsy rather than sampling at random.',
+      },
+    ],
+  },
+  {
+    slug: 'ent-ophthalmology',
+    name: 'ENT & Ophthalmology',
+    icon: 'Ear',
+    art: 'ent',
+    tagline: 'Hearing, balance, sinus and vision restoration',
+    summary:
+      'Cochlear implantation, endoscopic sinus surgery and a high-volume cataract service with day-case pathways and same-week listing.',
+    overview:
+      'Sight and hearing shape independence, so our combined sensory institute is built around fast access. The cataract service operates a straight-to-theatre pathway for suitable patients, the cochlear implant programme covers assessment through lifelong mapping, and the balance clinic investigates dizziness with videonystagmography rather than trial-and-error medication.',
+    established: 1988,
+    beds: 18,
+    consultants: 20,
+    procedures: '6,400 procedures a year',
+    highlights: [
+      'Day-case cataract surgery with same-week listing',
+      'Cochlear implant programme from assessment to lifelong mapping',
+      'Endoscopic and image-guided sinus surgery',
+      'Balance clinic with videonystagmography',
+      'Medical retina injections and diabetic eye screening',
+    ],
+    treatments: [
+      'Cataract & refractive surgery',
+      'Medical retina & macular degeneration',
+      'Glaucoma monitoring & surgery',
+      'Cochlear implantation & hearing aids',
+      'Endoscopic sinus surgery',
+      'Tonsil, adenoid & airway surgery',
+      'Head & neck cancer surgery',
+      'Vertigo and balance assessment',
+    ],
+    technology: [
+      { name: 'Femtosecond laser', detail: 'Precision capsulotomy for complex cataracts' },
+      { name: 'OCT imaging', detail: 'Cross-sectional retinal scanning in seconds' },
+      { name: 'Image-guided sinus navigation', detail: 'Sub-millimetre accuracy near the skull base' },
+    ],
+    pathway: [
+      { step: 'Assessment', detail: 'Vision, hearing and imaging in a single visit.' },
+      { step: 'Decision', detail: 'Options explained with realistic outcome data.' },
+      { step: 'Procedure', detail: 'Day case under local or general anaesthesia.' },
+      { step: 'Next-day review', detail: 'Checked within 24 hours by the operating team.' },
+      { step: 'Rehabilitation', detail: 'Hearing mapping or refraction once healed.' },
+    ],
+    faqs: [
+      {
+        q: 'How soon can cataract surgery be arranged?',
+        a: 'Suitable patients are typically listed within one to two weeks of assessment, and the procedure itself takes about twenty minutes under local anaesthetic.',
+      },
+      {
+        q: 'Will a cochlear implant restore normal hearing?',
+        a: 'It restores useful hearing rather than natural hearing. Most adults understand speech well within six months, and results improve steadily over the first two years with mapping.',
+      },
+      {
+        q: 'What causes recurrent dizziness?',
+        a: 'Most cases are inner-ear in origin and treatable — benign positional vertigo often resolves with a bedside repositioning manoeuvre performed at the first appointment.',
+      },
+    ],
+  },
+  {
+    slug: 'paediatrics',
+    name: 'Paediatrics',
+    icon: 'SmilePlus',
+    art: 'paeds',
+    tagline: 'Child health, from newborn to adolescence',
+    summary:
+      'A separate children’s wing with its own emergency entrance, play specialists, parent beds in every room and consultant paediatricians on site around the clock.',
+    overview:
+      'Children are not small adults, so the Vitalis children’s wing has its own entrance, its own emergency area and its own rules — parents stay, play specialists prepare children for procedures, and every bedroom has a parent bed. Sub-specialist clinics cover respiratory, allergy, neurodevelopment, endocrinology and general paediatric surgery.',
+    established: 1949,
+    beds: 40,
+    consultants: 23,
+    procedures: '24,000 attendances a year',
+    highlights: [
+      'Separate children’s emergency entrance and waiting area',
+      'Parent bed in every room; no visiting restrictions for parents',
+      'Play specialists prepare children for procedures and scans',
+      'Paediatric allergy service with supervised food challenges',
+      'Neurodevelopmental and autism assessment pathway',
+    ],
+    treatments: [
+      'General paediatrics & acute illness',
+      'Paediatric respiratory & asthma',
+      'Allergy testing & immunotherapy',
+      'Neurodevelopmental assessment',
+      'Paediatric endocrinology & growth',
+      'Paediatric surgery & urology',
+      'Adolescent medicine',
+      'Childhood vaccination clinic',
+    ],
+    technology: [
+      { name: 'Child-scale imaging', detail: 'Dose-optimised protocols and distraction technology' },
+      { name: 'Lung-function laboratory', detail: 'Age-appropriate spirometry and challenge testing' },
+      { name: 'Telehealth follow-up', detail: 'Fewer school days lost to routine reviews' },
+    ],
+    pathway: [
+      { step: 'Booking', detail: 'Appointments outside school hours wherever possible.' },
+      { step: 'Preparation', detail: 'A play specialist explains what will happen, in their language.' },
+      { step: 'Assessment', detail: 'Consultant-led, with a parent present throughout.' },
+      { step: 'Treatment', detail: 'Child-sized doses, child-sized equipment, child-sized rooms.' },
+      { step: 'Transition', detail: 'Structured handover to adult services at sixteen.' },
+    ],
+    faqs: [
+      {
+        q: 'Can I stay overnight with my child?',
+        a: 'Always. Every paediatric room has a parent bed, and parents are not treated as visitors — there are no restricted hours for you.',
+      },
+      {
+        q: 'How do you prepare children for scans?',
+        a: 'Play specialists use dolls, photo books and rehearsal so the child knows what to expect. Most children complete an MRI awake by the age of five with this preparation.',
+      },
+      {
+        q: 'Do you run allergy food challenges?',
+        a: 'Yes, in a supervised day-case setting with resuscitation facilities immediately available. A challenge usually takes four to six hours.',
+      },
+    ],
+  },
+  {
+    slug: 'rehabilitation',
+    name: 'Rehabilitation & Physiotherapy',
+    icon: 'Wind',
+    art: 'rehab',
+    tagline: 'Recovery, mobility and return to everyday life',
+    summary:
+      'A 900 m² therapy gym, hydrotherapy pool and inpatient rehabilitation ward for neurological, cardiac and orthopaedic recovery.',
+    overview:
+      'Treatment ends when function returns, not when the operation finishes. Our rehabilitation institute runs inpatient programmes for stroke and complex orthopaedic recovery alongside outpatient physiotherapy, occupational therapy, speech and language therapy and clinical psychology — all working from one shared goal sheet written with the patient.',
+    established: 1996,
+    beds: 32,
+    consultants: 14,
+    procedures: '46,000 therapy sessions a year',
+    highlights: [
+      'Nine-hundred square metre therapy gymnasium',
+      'Hydrotherapy pool at 34°C for early weight-bearing',
+      'Inpatient neuro-rehabilitation with goal-based programmes',
+      'Cardiac and pulmonary rehabilitation cohorts',
+      'Home assessment and equipment provision before discharge',
+    ],
+    treatments: [
+      'Neurological rehabilitation',
+      'Orthopaedic & post-surgical physiotherapy',
+      'Cardiac & pulmonary rehabilitation',
+      'Hydrotherapy',
+      'Occupational therapy',
+      'Speech & language therapy',
+      'Clinical psychology & pain management',
+      'Prosthetics and orthotics',
+    ],
+    technology: [
+      { name: 'Robotic gait trainer', detail: 'Body-weight supported walking after stroke' },
+      { name: 'Hydrotherapy pool', detail: 'Movement at a fraction of joint load' },
+      { name: 'Functional electrical stimulation', detail: 'Reactivating weak muscle groups' },
+    ],
+    pathway: [
+      { step: 'Goal setting', detail: 'You define what recovery should look like.' },
+      { step: 'Programme design', detail: 'A therapy plan with measurable milestones.' },
+      { step: 'Intensive phase', detail: 'Daily inpatient or twice-weekly outpatient sessions.' },
+      { step: 'Home assessment', detail: 'Adaptations and equipment fitted before discharge.' },
+      { step: 'Maintenance', detail: 'A written home programme and review at three months.' },
+    ],
+    faqs: [
+      {
+        q: 'How soon after surgery does therapy start?',
+        a: 'Usually within hours. Early mobilisation reduces complications, and our enhanced-recovery pathways have most joint replacement patients standing on the day of surgery.',
+      },
+      {
+        q: 'Do I need a referral for physiotherapy?',
+        a: 'No — you may book directly. A first assessment lasts forty-five minutes and includes a written home programme.',
+      },
+      {
+        q: 'Is hydrotherapy suitable for arthritis?',
+        a: 'It is often ideal. Warm water reduces joint load while allowing full-range movement, and many patients manage exercises in the pool that they cannot yet do on land.',
+      },
+    ],
+  },
+]
+
+export const getDepartment = (slug) => departments.find((d) => d.slug === slug)
