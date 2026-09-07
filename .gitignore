@@ -2,15 +2,19 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
 node_modules
 dist
 dist-ssr
 *.local
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Local mail/ticket artefacts written by the dev email transport
+server/.mailbox
 
 # Editor directories and files
 .vscode/*
